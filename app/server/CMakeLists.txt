@@ -1,11 +1,11 @@
 add_executable(mining-pool
-    src/main.cpp
+	src/main.cpp
 )
 
 target_link_libraries(mining-pool PRIVATE
-    server-lib
+	server-lib
 )
 
 install(TARGETS mining-pool
-    RUNTIME DESTINATION bin
+	RUNTIME DESTINATION bin
 )

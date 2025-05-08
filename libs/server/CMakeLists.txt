@@ -1,12 +1,12 @@
 add_library(server-lib STATIC
-    src/server.cpp
-    src/session.cpp
+	src/server.cpp
+	src/session.cpp
 )
 
 # Публичные заголовки
 target_include_directories(server-lib PUBLIC
-    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-    $<INSTALL_INTERFACE:include>
+	$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+	$<INSTALL_INTERFACE:include>
 )
 
 # Зависимости
@@ -15,8 +15,8 @@ target_link_libraries(server-lib PUBLIC Boost::system)
 
 # Установка
 install(TARGETS server-lib EXPORT NetworkCoreTargets
-    ARCHIVE DESTINATION lib
-    INCLUDES DESTINATION include
+	ARCHIVE DESTINATION lib
+	INCLUDES DESTINATION include
 )
 
 install(DIRECTORY include/ DESTINATION include)
